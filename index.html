@@ -4,16 +4,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <nav id="navbar">
         <header>JS Documentation</header>
         <ul>
           <li><a class="nav-link" href="#Introduction">Introduction</a></li>
-          <li>
-            <a class="nav-link" href="#What_you_should_already_know"
-              >What you should already know</a
-            >
-          </li>
           <li>
             <a class="nav-link" href="#JavaScript_and_Java"
               >JavaScript and Java</a
@@ -21,6 +15,7 @@
           </li>
           <li><a class="nav-link" href="#Hello_world">Hello world</a></li>
           <li><a class="nav-link" href="#Variables">Variables</a></li>
+          <li><a class="nav-link" href="#Constants">Constants</a></li>
         </ul>
       </nav>
       <!-- main section starts here -->
@@ -42,6 +37,14 @@
               operators, control structures, and statements. Core JavaScript can
               be extended for a variety of purposes by supplementing it with
               additional objects; for example:
+              <code>if (condition_1) { statement_1; } else if (condition_2) {
+              statement_2; } else if (condition_n) { statement_n; } else {
+              statement_last; }
+              </code>
+              <code>if (condition) { statement_1_runs_if_condition_is_true;
+              statement_2_runs_if_condition_is_true; } else {
+              statement_3_runs_if_condition_is_false;
+              statement_4_runs_if_condition_is_false; }</code>
             </p>
             <ul>
               <li>
@@ -59,25 +62,17 @@
                 another of the application, or perform file manipulations on a
                 server.
               </li>
-            </ul>
-          </article>
-        </section>
-        <section class="main-section" id="What_you_should_already_know">
-          <header>What you should already know</header>
-          <article>
-            <p>This guide assumes you have the following basic background:</p>
-  
-            <ul>
               <li>
-                A general understanding of the Internet and the World Wide Web
-                (WWW).
+                Object-oriented. No distinction between types of objects.
+                Inheritance is through the prototype mechanism, and properties and 
+                methods can be added to any object dynamically.
               </li>
-              <li>Good working knowledge of HyperText Markup Language (HTML).</li>
               <li>
-                Some programming experience. If you are new to programming, try
-                one of the tutorials linked on the main page about JavaScript.
+                Variable data types are not declared (dynamic typing, loosely typed).
               </li>
-              <li><a class="nav-link" href="#Reference">Reference</a></li>
+              <li>
+                Cannot automatically write to hard disk.
+              </li>
             </ul>
           </article>
         </section>
@@ -147,21 +142,38 @@
             Number_hits, temp99, and _name.
           </p>
         </section>
-        <section class="main-section" id="Reference">
-          <header>Reference</header>
+        <section class="main-section" id="Constants">
+          <header>Constants</header>
           <article>
-            <ul>
-              <li>
-                All the documentation in this page is taken from
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
-                  target="_blank"
-                  >MDN</a
-                >
-              </li>
-            </ul>
-          </article>
-        </section>
+            <p>
+              You can create a read-only, named constant with the const keyword.
+              The syntax of a constant identifier is the same as for a variable
+              identifier: it must start with a letter, underscore or dollar sign
+              and can contain alphabetic, numeric, or underscore characters.
+            </p>
+  
+            <code>const PI = 3.14;</code>
+            <p>
+              A constant cannot change value through assignment or be re-declared
+              while the script is running. It has to be initialized to a value.
+            </p>
+  
+            <p>
+              The scope rules for constants are the same as those for let block
+              scope variables. If the const keyword is omitted, the identifier is
+              assumed to represent a variable.
+            </p>
+  
+            <p>
+              You cannot declare a constant with the same name as a function or
+              variable in the same scope. For example:
+            </p>
+  
+            <code
+              >// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS
+              WILL CAUSE AN ERROR ALSO function f() { const g = 5; var g;
+              //statements }</code
+            >
       </main>
  </body>
 </html>
